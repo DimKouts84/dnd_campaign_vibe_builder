@@ -64,13 +64,21 @@ A standard campaign should be structured hierarchically. Maintain this organizat
     *   **Rule:** If it has a **Name** and a **Backstory**, it belongs here.
     *   **Friendly/Neutral:** Use `npc_friendly_template.md`.
     *   **Hostile/Villain:** Use `npc_adversary_template.md`.
-5.  **The Party (`4_Party/`)**
+5.  **DM Screen (`5_DM_Screen/`)**
+    *   **Purpose:** DM-only campaign management — private notes, TODOs, and scratchpad.
+    *   **Structure:** `5_DM_Screen/`
+    *   **Files:**
+        * `Dashboard.md` — central hub and campaign heartbeat
+        * `TODOs.md` — Kanban-style backlog and tasks
+        * `Scratchpad.md` — quick brain-dumps
+    *   **Rule:** This folder is DM-private. Do not place player-facing lore here.
+6.  **The Party (`4_Party/`)**
     *   One file per Player Character (`pc_template.md`).
     *   **Track:** Quick stats (AC/PP), Personal Quests, and Backstory hooks.
-6.  **Sessions (`6_Journal/`)**
+7.  **Sessions (`6_Journal/`)**
     *   Combat, Social, and Exploration encounters.
     *   Must include loot and XP rewards.
-7.  **Assets (`7_Assets/`)**
+8.  **Assets (`7_Assets/`)**
     *   **Subfolders:** `Maps`, `NPCs`, `Enemies`, `Items`.
     *   Store all images here.
     *   Link format: `![[ImageName.png|300]]` (Width 300px).

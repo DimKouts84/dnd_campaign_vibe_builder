@@ -1,0 +1,36 @@
+# Obsidian Metadata Schema
+# Copy these properties into the YAML frontmatter of your files.
+
+## NPC Metadata
+```yaml
+---
+type: npc
+location: [[City Name]]
+status: active # or dead, missing
+role: "ally | neutral | villain"
+faction: [[Faction Name]]
+level: 5
+voice: "Gravelly, whispery"
+---
+```
+
+## Location Metadata
+```yaml
+---
+type: location
+region: [[Region Name]]
+danger_level: medium # low, medium, high, deadly
+shops: true
+---
+```
+
+## Quest Metadata
+```yaml
+---
+type: quest
+giver: [[NPC Name]]
+status: not_started # in_progress, completed, failed
+reward_xp: 500
+reward_gold: 100
+---
+```

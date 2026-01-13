@@ -24,7 +24,8 @@ This is an **Agentic Framework** based on the **Agentic AI Foundation (AAIF)** s
 4.  **Build Your World:**
     *   Duplicate the `mock_campaign_{name}` folder.
     *   Rename it to your campaign's title (e.g., `The_Frozen_Throne`).
-    *   Start filling in the `1_Locations`, `2_NPCs`, and `3_Quests` with the help of your AI co-DM!
+    *   Use the templates in the `Templates` folder to easily create new files, and fill them with the help of your AI co-DM!
+    *   Start filling in the `1_World`, `2_NPCs`, and `3_Quests` with the help of your AI co-DM!
 
 <br>
 

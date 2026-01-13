@@ -2,6 +2,11 @@
 type: player_character
 status: active
 class: Rogue 3
+race: "{Race}"
+background: "{Background}"
+player_name: "{Player Name}"
+tags:
+  - party
 ---
 
 # Rogue The {Nickname}

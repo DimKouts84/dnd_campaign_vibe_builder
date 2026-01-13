@@ -1,8 +1,15 @@
 ---
 type: npc
+city: "[[{City Name}]]"
+area: "[[{Region Name}]]"
+faction: "[[{Faction Name}]]"
+status: active
 role: ally
-location: [[{location_name}]]
-status: alive
+race: "{Race}"
+class: "{Class}"
+alignment: "{Alignment}"
+tags:
+  - npc
 ---
 
 # {NPC Name}

@@ -1,0 +1,136 @@
+# Obsidian Metadata Schema
+# Copy these properties into the YAML frontmatter of your files.
+
+## NPC Metadata
+```yaml
+---
+type: npc
+city: "[[City Name]]"
+area: "[[Region Name]]"
+faction: "[[Faction Name]]"
+status: active # or dead, missing
+role: ally # or neutral, villain
+race: "Race Name"
+class: "Class Name"
+alignment: "Alignment"
+tags:
+  - npc
+---
+```
+
+## Location Metadata
+```yaml
+---
+type: location
+city: "[[City Name]]"
+area: "[[Region Name]]"
+location_type: tavern # or shop, temple, dungeon, etc.
+status: active # or ruined, abandoned
+danger_level: medium # low, medium, high, deadly
+tags:
+  - location
+---
+```
+
+## Quest Metadata
+```yaml
+---
+type: quest
+city: "[[City Name]]"
+area: "[[Region Name]]"
+giver: "[[NPC Name]]"
+status: not_started # in_progress, completed, failed
+difficulty: medium # easy, medium, hard, deadly
+reward_xp: 500
+reward_gold: 100
+is_PC_personal_quest: false
+NPCs_involved:
+  - "[[NPC Name]]"
+tags:
+  - quest
+---
+```
+
+## Encounter Metadata
+```yaml
+---
+type: encounter
+city: "[[City Name]]"
+area: "[[Region Name]]"
+location: "[[Location Name]]"
+encounter_type: combat # or social, puzzle, trap
+difficulty: medium # easy, medium, hard, deadly
+monsters:
+  - "[[Monster Name]]"
+loot: "Items"
+status: planned # active, completed
+tags:
+  - encounter
+---
+```
+
+## Session Log Metadata
+```yaml
+---
+type: session
+session_number: 1
+irl_date: 2023-10-27
+fc-date: Year, Month, Day
+location: "[[Location Name]]"
+city: "[[City Name]]"
+area: "[[Region Name]]"
+locations_visited:
+  - "[[Location Name]]"
+characters:
+  - "[[PC Name]]"
+npcs_met:
+  - "[[NPC Name]]"
+quests_active:
+  - "[[Quest Name]]"
+quests_completed:
+  - "[[Quest Name]]"
+xp_awarded: 0
+loot: "Item 1, Item 2"
+tags:
+  - session
+---
+```
+
+## Chapter Metadata
+```yaml
+---
+type: chapter
+chapter_number: 1
+status: active # planned, active, completed
+main_quest: "[[Quest Name]]"
+key_locations:
+  - "[[Location Name]]"
+tags:
+  - chapter
+---
+```
+
+## Player Character Metadata
+```yaml
+---
+type: player_character
+status: active # or dead, retired
+class: "Class Name"
+race: "Race Name"
+background: "Background Name"
+player_name: "Player Name"
+tags:
+  - party
+---
+```
+
+## DM Screen Metadata
+```yaml
+---
+type: dm_screen # or dm_todo, dm_scratchpad
+last_updated: 2023-10-27
+status: private
+tags:
+  - dm_screen
+---
+```

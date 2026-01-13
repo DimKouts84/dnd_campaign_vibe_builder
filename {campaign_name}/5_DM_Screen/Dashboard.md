@@ -1,8 +1,9 @@
 ---
 type: dm_screen
-location: [[{campaign_name}]]
-status: private
 last_updated: {YYYY-MM-DD}
+status: private
+tags:
+  - dm_screen
 ---
 
 # Dashboard

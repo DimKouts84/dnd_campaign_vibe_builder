@@ -1,8 +1,24 @@
 ---
-type: session_note
-session_num: {number}
-date: {YYYY-MM-DD}
-status: planned # planned, completed
+type: session
+session_number: {number}
+irl_date: {YYYY-MM-DD}
+fc-date: {YYYY, MM, DD}
+location: "[[{Location Name}]]"
+city: "[[{City_Name}]]"
+area: "[[{Region_Name}]]"
+locations_visited:
+  - "[[{Location Name}]]"
+characters:
+  - "[[{PC Name}]]"
+npcs_met:
+  - "[[{NPC Name}]]"
+quests_active:
+  - "[[{Quest Name}]]"
+quests_completed: []
+xp_awarded: 0
+loot: ""
+tags:
+  - session
 ---
 
 # Session {Number}: {Session Title}

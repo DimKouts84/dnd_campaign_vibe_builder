@@ -1,8 +1,15 @@
 ---
 type: npc
-location: [[{location_name}]]
-status: alive
-faction: [[Merchant's Guild]]
+city: "[[{City_Name}]]"
+area: "[[{Region_Name}]]"
+faction: "[[Merchant's Guild]]"
+status: active
+role: neutral
+race: "Human"
+class: "Commoner"
+alignment: "Neutral Good"
+tags:
+  - npc
 ---
 
 # {NPC Name}

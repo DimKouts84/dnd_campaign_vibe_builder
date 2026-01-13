@@ -1,7 +1,9 @@
 ---
-type: dm_todos
-location: [[{campaign_name}/5_DM_Screen]]
+type: dm_todo
+last_updated: {YYYY-MM-DD}
 status: private
+tags:
+  - dm_screen
 ---
 
 # TODOs (Kanban)

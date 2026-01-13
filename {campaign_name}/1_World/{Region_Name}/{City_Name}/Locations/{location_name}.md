@@ -1,8 +1,12 @@
 ---
 type: location
-region: [[{region_name}]]
+city: "[[{City_Name}]]"
+area: "[[{Region_Name}]]"
+location_type: tavern # defaulting to tavern as example, or generic location
+status: active
 danger_level: medium
-shops: true
+tags:
+  - location
 ---
 
 # {Location Name}

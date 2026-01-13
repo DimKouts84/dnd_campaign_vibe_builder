@@ -2,7 +2,7 @@
 
 Welcome, bold adventurer, to the **Campaign Vibe Builder**! This isn't just an *opinionated* collection of files; it's a **magical workshop** designed to turn your scattered thoughts into epic sagas. It is ready system with templates, to download a begin building.  
 
-It can be used as an world builder, an organization system to keep notes and track your progress, to run your campaigns, and to generate content for your campaigns. Without getting lost with the help of LLMs & code editors (like GitHub Copilot, Claude, Cline, or Antigravity) and other amazing tools like Obsidian.
+It can be used as an world builder, an organization system to keep notes and track your progress, to run your campaigns, and to generate content for your campaigns. Without getting lost with the help of **LLM**s, **code editors** (like GitHub Copilot, Claude, Cline, or Antigravity) and **Obsidian**.
 
 <br>
 
@@ -42,29 +42,31 @@ We support power-user features for heavily modded Obsidian vaults!
 When you initialize a new campaign, you'll get this organized structure:
 
 ```text
-{campaign_name}/
-├── 00_Campaign_Bible.md       # The core concept, themes, and factions
-├── 0_Chapters/                # High-level story arcs and syncopsis
-├── 1_World/
-│   └── {Region}/
-│       └── {City}/
-│           ├── Locations/     # Keys locations & POIs
-│           ├── Shops/         # Merchants & inventories
-│           └── Encounters/    # Combat & social scenarios
-├── 2_NPCs/
-│   └── {Region}/
-│       └── {City}/            # Friendly & Hostile NPCs
-├── 3_Quests/                  # Active and backlog quests
-├── 4_Party/                   # PC Sheets (Stats, Backstories, Loot)
-├── 6_Journal/                 # Session notes (Lazy DM style)
-├── 7_Assets/                  # Maps, tokens, and handout images
-└── Templates/                 # Ready-to-use MD templates & Schema
+d&d_campaign_vibe_builder/
+├── Templates/                 # System-wide Templates & Schema
+├── {campaign_name}/
+│   ├── 00_Campaign_Bible.md   # The core concept, themes, and factions
+│   ├── 0_Chapters/            # High-level story arcs and syncopsis
+│   ├── 1_World/
+│   │   └── {Region}/
+│   │       └── {City}/
+│   │           ├── Locations/ # Keys locations (Shops, Taverns, Temples)
+│   │           └── Encounters/ # Combat & social scenarios
+│   ├── 2_NPCs/                # Friendly & Hostile NPCs
+│   ├── 3_Quests/              # Active and backlog quests
+│   ├── 4_Party/               # PC Sheets (Stats, Backstories, Loot)
+│   ├── 5_DM_Screen/           # DM-Private Dashboard & TODOs
+│   ├── 6_Journal/             # Session notes (Lazy DM style)
+│   └── 7_Assets/              # Maps, tokens, and handout images
+└── AGENTS.md                  # The Brain (Instructions)
 ```
 
 <br>
 
 ## 🚀 Key Features
-*   **Obsidian Ready:** All files use `[[WikiLinks]]` and Callouts for beautiful rendering in Obsidian. Also includes specific skills to write accurate markdown code for Obsidian [TTRPG plugins](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.01+Plugins+by+Category/Plugins+for+TTRPG).
+*   **Property-Driven:** Every file type (NPC, Quest, Session) has a strict property schema for powerful data management.
+*   **Dataview Ready:** Includes pre-built queries to track Active Quests, NPC locations, and Session Summaries automatically.
+*   **Obsidian Ready:** Uses `[[WikiLinks]]` and Callouts for beautiful rendering.
 *   **MermaidJS Support:** Visualize your dungeons and flowcharts.
 *   **Imaginative Co-Pilot:** The agent is trained to be **proactive**—it won't just nod; it will suggest floating islands, cursed swords, and goblin masquerade balls!
 

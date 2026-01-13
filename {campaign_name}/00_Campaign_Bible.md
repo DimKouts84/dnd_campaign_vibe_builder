@@ -1,3 +1,10 @@
+---
+type: campaign_bible
+status: active
+tags:
+  - campaign
+---
+
 # {Campaign Title}
 **Campaign Bible & Overview**
 

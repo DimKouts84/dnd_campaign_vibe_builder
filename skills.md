@@ -118,3 +118,42 @@ Use **HTML tags** with relative paths. This allows resizing and alignment (wrapp
 *   **Statblocks:** Place them at the bottom or in a dedicated sidebar.
 *   **Keep it Compact:** Don't let giant images push text off-screen. Text should flow around character portraits.
 
+## 8. Advanced Property Management & Dataview
+> **Trigger:** When organizing campaign data or generating summaries.
+
+### **Cross-Referencing Logic**
+*   **Always use WikiLinks** in properties: `city: "[[Neverwinter]]"` not `city: Neverwinter`. This allows graph connections.
+*   **Consistency:** Ensure property names match the schema in `AGENTS.md` exactly.
+
+### **Dataview Query Types**
+Use these snippets to dynamically list content.
+
+**1. Finding all NPCs in a City:**
+```dataview
+TABLE role, race, status
+FROM #npc
+WHERE contains(city, [[Current City Name]])
+SORT role ASC
+```
+
+**2. Finding Active Quests:**
+```dataview
+TABLE giver, difficulty, status
+FROM #quest
+WHERE status != "completed" AND status != "failed"
+```
+
+**3. Session Log Summary:**
+```dataview
+TABLE irl_date, fc-date, location, xp_awarded
+FROM #session
+SORT session_number DESC
+LIMIT 5
+```
+
+**4. Finding Planned Encounters:**
+```dataview
+TABLE encounter_type, difficulty, monsters
+FROM #encounter
+WHERE status = "planned"
+```

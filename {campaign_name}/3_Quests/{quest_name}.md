@@ -1,9 +1,17 @@
 ---
 type: quest
-giver: [[{npc_name}]]
-location: [[{location_name}]]
+city: "[[{City_Name}]]"
+area: "[[{Region_Name}]]"
+giver: "[[{npc_name}]]"
 status: not_started
+difficulty: medium
+reward_xp: 500
 reward_gold: {amount}
+is_PC_personal_quest: false
+NPCs_involved:
+  - "[[{npc_name}]]"
+tags:
+  - quest
 ---
 
 # {Quest Name}

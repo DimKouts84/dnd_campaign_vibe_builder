@@ -17,14 +17,14 @@ Before providing an answer, **determine the User's Current Mode**. If it is ambi
 ### 🌍 The World Builder (Prep Mode)
 *   **Triggers:** "Create an NPC", "Design a dungeon", "Write a history".
 *   **Action:**
-    *   **Consult the Archives:** Before forging new content, scour the existing **Campaign Directory** for context. Search the campaign folder for related files, links, and templates — do not wander beyond the campaign's borders.
+    *   **Consult the Archives:** Before forging new content, scour the existing **Campaign Directory** for context. Search the campaign folder for related files and links. Use the root `Templates/` directory for structure.
     *   **Engage Digital Imagination:** Don't just fulfill the request; expand it with evocative hooks and sensory detail.
     *   **Forge the Vault:** When the user requests or approves campaign content, actively create or update the corresponding files and folders within the campaign directory (for example: NPCs, Locations, Encounters, Chapters). Inscribe lore only inside the campaign folder; do not create files irrelevant to the campaign or outside the campaign directory.
     *   **Proactive Questioning:** Ask *leading* questions to spark creativity:
         *   "Do you want this quest resolved by combat, riddle, or social manipulation?"
         *   "Is the swamp a small bog or a sprawling, kingdom-sized hazard?"
         *   "What if the Paladin is actually a spy for the Lich?"
-    *   **Use Templates:** Always suggest creating a file from `Templates/`.
+    *   **Use Templates:** Always suggest creating a file from the root `Templates/` directory.
 
 ### 🎲 The Dungeon Master (Live Mode)
 *   **Triggers:** "Quick, I need a name!", "What is the AC of a goblin?", "Brain dump: party killed the lich."
@@ -57,7 +57,7 @@ A standard campaign should be structured hierarchically. Maintain this organizat
     *   **Content:** Synopsis, Key Scenes list, Links to Quests/Locations.
 3.  **The World (`1_World/`)**
     *   **Structure:** `1_World/{Region}/{City}/`.
-    *   **Contents:** Inside each City folder, create subfolders for `Locations`, `Shops`, and `Encounters`.
+    *   **Contents:** Inside each City folder, create subfolders for `Locations`, `Encounters`, and `Factions`. *Note: Shops are considered Locations.*
     *   *Note:* Wilderness encounters can go directly in the `Region` folder.
 4.  **NPCs (`2_NPCs/`)**
     *   **Structure:** `2_NPCs/{Region}/{City}/{NPC_Name}.md`.
@@ -159,13 +159,161 @@ A standard campaign should be structured hierarchically. Maintain this organizat
 *   **Placement:** Add Mermaid diagrams to `00_Campaign_Bible.md`, relevant `0_Chapters/*`, `3_Quests/*`, and `6_Journal/*` notes. Prefer short, focused diagrams near the top of the note (under Frontmatter or the Intro) and update them as milestones change.
 *   **Style:** Keep diagrams simple and legible; use labels for emotional beats and decisions (e.g., "Hook", "Crescendo", "Mystery Revealed"). Reference `skills.md` for Mermaid conventions.
 
+## 8. Metadata & Properties Protocol
+**CRITICAL:** All new files MUST include YAML frontmatter with the following properties. This enables the campaign's cross-referencing system.
+
+### **NPC Properties**
+```yaml
+---
+type: npc
+city: "[[City Name]]"
+area: "[[Region Name]]"
+faction: "[[Faction Name]]"
+status: active # or dead, missing
+role: ally # or neutral, villain
+race: "Race Name"
+class: "Class Name"
+alignment: "Alignment"
+tags:
+  - npc
+---
+```
+
+### **Location Properties**
+```yaml
+---
+type: location
+city: "[[City Name]]"
+area: "[[Region Name]]"
+location_type: tavern # or shop, temple, dungeon, etc.
+status: active # or ruined, abandoned
+danger_level: medium # low, medium, high, deadly
+tags:
+  - location
+---
+```
+
+### **Quest Properties**
+```yaml
+---
+type: quest
+city: "[[City Name]]"
+area: "[[Region Name]]"
+giver: "[[NPC Name]]"
+status: not_started # in_progress, completed, failed
+difficulty: medium # easy, medium, hard, deadly
+reward_xp: 500
+reward_gold: 100
+is_PC_personal_quest: false
+NPCs_involved:
+  - "[[NPC Name]]"
+tags:
+  - quest
+---
+```
+
+### **Session Log Properties**
+```yaml
+---
+type: session
+session_number: 1
+irl_date: 2023-10-27
+fc-date: Year, Month, Day
+location: "[[Location Name]]"
+city: "[[City Name]]"
+area: "[[Region Name]]"
+locations_visited:
+  - "[[Location Name]]"
+characters:
+  - "[[PC Name]]"
+npcs_met:
+  - "[[NPC Name]]"
+quests_active:
+  - "[[Quest Name]]"
+quests_completed:
+  - "[[Quest Name]]"
+xp_awarded: 0
+loot: "Item 1, Item 2"
+tags:
+  - session
+---
+```
+
+
+### **DM Screen Properties**
+```yaml
+---
+type: dm_screen # or dm_todo, dm_scratchpad
+last_updated: 2023-10-27
+status: private
+tags:
+  - dm_screen
+---
+```
+
+### **Player Character Properties**
+```yaml
+---
+type: player_character
+status: active # or dead, retired
+class: "Rogue 3"
+race: "Elf"
+background: "Criminal"
+player_name: "Player Name"
+tags:
+  - party
+---
+```
+
+### **Encounter Properties**
+```yaml
+---
+type: encounter
+city: "[[City Name]]"
+area: "[[Region Name]]"
+location: "[[Location Name]]"
+encounter_type: combat # or social, puzzle, trap
+difficulty: medium # easy, medium, hard, deadly
+monsters:
+  - "[[Monster Name]]"
+loot: "Items"
+status: planned # active, completed
+tags:
+  - encounter
+---
+```
+
+### **Chapter Properties**
+```yaml
+---
+type: chapter
+chapter_number: 1
+status: active # planned, active, completed
+main_quest: "[[Quest Name]]"
+key_locations:
+  - "[[Location Name]]"
+tags:
+  - chapter
+---
+```
+
+### **Campaign Bible Properties**
+```yaml
+---
+type: campaign_bible
+status: active
+tags:
+  - campaign
+---
+```
+
 ## Workspace Guidelines
 *   **File Naming:** `snake_case` preferred for filenames.
 *   **Frontmatter:** Use YAML frontmatter for Obsidian metadata.
     ```yaml
     ---
     type: npc
-    location: [[Phandalin]]
-    status: alive
+    city: "[[Neverwinter]]"
+    status: active
     ---
     ```

@@ -1,7 +1,12 @@
 ---
-type: shop
-owner: [[{npc_name}]]
-location: [[{location_name}]]
+type: location
+city: "[[{City_Name}]]"
+area: "[[{Region_Name}]]"
+location_type: shop
+status: active
+danger_level: low
+tags:
+  - location
 ---
 
 # {Shop Name}

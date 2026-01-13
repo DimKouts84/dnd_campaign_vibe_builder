@@ -1,3 +1,14 @@
+---
+type: chapter
+chapter_number: 1
+status: active
+main_quest: "[[{quest_name}]]"
+key_locations:
+  - "[[{location_name}]]"
+tags:
+  - chapter
+---
+
 # Chapter 1: {Chapter Name}
 **Part 1 of {Campaign Title}**
 

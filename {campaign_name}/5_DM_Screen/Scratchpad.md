@@ -1,7 +1,9 @@
 ---
 type: dm_scratchpad
-location: [[{campaign_name}/5_DM_Screen]]
+last_updated: {YYYY-MM-DD}
 status: private
+tags:
+  - dm_screen
 ---
 
 # Scratchpad

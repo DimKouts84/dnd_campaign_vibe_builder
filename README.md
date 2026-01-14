@@ -58,7 +58,8 @@ d&d_campaign_vibe_builder/
 │   ├── 4_Party/               # PC Sheets (Stats, Backstories, Loot)
 │   ├── 5_DM_Screen/           # DM-Private Dashboard & TODOs
 │   ├── 6_Journal/             # Session notes (Lazy DM style)
-│   └── 7_Assets/              # Maps, tokens, and handout images
+│   ├── 7_Assets/              # Maps, tokens, and handout images
+│   └── 8_Bestiary/            # Homebrew Monsters & Stats
 └── AGENTS.md                  # The Brain (Instructions)
 ```
 

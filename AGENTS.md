@@ -78,10 +78,12 @@ A standard campaign should be structured hierarchically. Maintain this organizat
 7.  **Sessions (`6_Journal/`)**
     *   Combat, Social, and Exploration encounters.
     *   Must include loot and XP rewards.
-8.  **Assets (`7_Assets/`)**
     *   **Subfolders:** `Maps`, `NPCs`, `Enemies`, `Items`.
     *   Store all images here.
     *   Link format: `![[ImageName.png|300]]` (Width 300px).
+9.  **Bestiary (`8_Bestiary/`)**
+    *   Homebrew monsters and creatures.
+    *   Use `monster_template.md`.
 
 ---
 
@@ -280,6 +282,56 @@ loot: "Items"
 status: planned # active, completed
 tags:
   - encounter
+---
+```
+
+### **Faction Properties**
+```yaml
+---
+type: faction
+location: "[[City Name]]"
+status: active # or destroyed, hidden
+disposition: neutral # friendly, neutral, hostile
+leader: "[[NPC Name]]"
+tags:
+  - faction
+---
+```
+
+### **Item Properties**
+```yaml
+---
+type: item
+item_type: weapon # or armor, potion, wondrous
+rarity: rare # common, uncommon, rare, very_rare, legendary, artifact
+attunement: true # or false
+status: owned # or lost, legendary_rumor
+owner: "[[PC Name]]" # or [[NPC Name]]
+tags:
+  - item
+---
+```
+
+### **Session Prep Properties**
+```yaml
+---
+type: session_prep
+session_number: 1
+status: draft # or ready, played
+tags:
+  - session_prep
+---
+```
+
+### **Monster Properties**
+```yaml
+---
+type: monster
+cr: 5
+biome: "[[Region Name]]" # or Forest, Swamp
+alignment: chaotic_evil
+tags:
+  - monster
 ---
 ```
 

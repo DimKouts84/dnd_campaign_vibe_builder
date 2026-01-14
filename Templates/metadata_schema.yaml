@@ -69,6 +69,33 @@ tags:
 ---
 ```
 
+## Faction Metadata
+```yaml
+---
+type: faction
+location: "[[City Name]]"
+status: active # or destroyed, hidden
+disposition: neutral # friendly, neutral, hostile
+leader: "[[NPC Name]]"
+tags:
+  - faction
+---
+```
+
+## Item Metadata
+```yaml
+---
+type: item
+item_type: weapon # or armor, potion, wondrous
+rarity: rare # common, uncommon, rare, very_rare, legendary, artifact
+attunement: true # or false
+status: owned # or lost, legendary_rumor
+owner: "[[PC Name]]" # or [[NPC Name]]
+tags:
+  - item
+---
+```
+
 ## Session Log Metadata
 ```yaml
 ---
@@ -93,6 +120,29 @@ xp_awarded: 0
 loot: "Item 1, Item 2"
 tags:
   - session
+---
+```
+
+## Session Prep Metadata
+```yaml
+---
+type: session_prep
+session_number: 1
+status: draft # or ready, played
+tags:
+  - session_prep
+---
+```
+
+## Monster Metadata
+```yaml
+---
+type: monster
+cr: 5
+biome: "[[Region Name]]" # or Forest, Swamp
+alignment: chaotic_evil
+tags:
+  - monster
 ---
 ```
 

@@ -1,8 +1,9 @@
 ---
-type: session_note
-session_num: {number}
-date: {YYYY-MM-DD}
-status: planned # planned, completed
+type: session_prep
+session_number: {number}
+status: draft # draft, ready, played
+tags:
+  - session_prep
 ---
 
 # Session {Number}: {Session Title}

@@ -18,6 +18,33 @@ tags:
 ---
 ```
 
+## Region Metadata
+```yaml
+---
+type: region
+status: active # or discovered, hidden
+climate: temperate # tropical, arctic, arid, etc.
+terrain: forest # mountain, swamp, coast, etc.
+recommended_level: 1-5
+tags:
+  - region
+---
+```
+
+## City Metadata
+```yaml
+---
+type: city
+region: "[[Region Name]]"
+status: active # or ruined, sieged
+population: 5000 # integer
+government: monarchy # democracy, magocracy, anarchy, etc.
+defense_level: high # low, medium, high
+tags:
+  - city
+---
+```
+
 ## Location Metadata
 ```yaml
 ---
@@ -183,4 +210,59 @@ status: private
 tags:
   - dm_screen
 ---
+
+## Deity Metadata
+```yaml
+---
+type: deity
+status: active
+alignment: {Alignment}
+domains:
+  - {Domain 1}
+  - {Domain 2}
+symbol: {Symbol Description}
+tags:
+  - deity
+---
+```
+
+## Spell Metadata
+```yaml
+---
+type: spell
+level: {Level}
+school: {School}
+casting_time: {1 Action}
+range: {60 feet}
+components: {V, S, M}
+duration: {Instantaneous}
+classes:
+  - {Class 1}
+  - {Class 2}
+tags:
+  - spell
+---
+```
+
+## Timeline Metadata
+```yaml
+---
+type: timeline
+world: "[[{World Name}]]"
+current_year: {Year}
+tags:
+  - timeline
+  - lore
+---
+```
+
+## DM Dashboard Metadata
+```yaml
+---
+type: dm_dashboard
+status: private
+tags:
+  - dm_screen
+---
+```
 ```

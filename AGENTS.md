@@ -164,6 +164,33 @@ A standard campaign should be structured hierarchically. Maintain this organizat
 ## 8. Metadata & Properties Protocol
 **CRITICAL:** All new files MUST include YAML frontmatter with the following properties. This enables the campaign's cross-referencing system.
 
+### **Region Properties**
+```yaml
+---
+type: region
+status: active # or discovered, hidden
+climate: temperate # tropical, arctic, arid, etc.
+terrain: forest # mountain, swamp, coast, etc.
+recommended_level: 1-5
+tags:
+  - region
+---
+```
+
+### **City Properties**
+```yaml
+---
+type: city
+region: "[[Region Name]]"
+status: active # or ruined, sieged
+population: 5000 # integer
+government: monarchy # democracy, magocracy, anarchy, etc.
+defense_level: high # low, medium, high
+tags:
+  - city
+---
+```
+
 ### **NPC Properties**
 ```yaml
 ---
@@ -356,6 +383,62 @@ type: campaign_bible
 status: active
 tags:
   - campaign
+---
+```
+
+
+### **Deity Properties**
+```yaml
+---
+type: deity
+status: active
+alignment: {Alignment}
+domains:
+  - {Domain 1}
+  - {Domain 2}
+symbol: {Symbol Description}
+tags:
+  - deity
+---
+```
+
+### **Spell Properties**
+```yaml
+---
+type: spell
+level: {Level}
+school: {School}
+casting_time: {1 Action}
+range: {60 feet}
+components: {V, S, M}
+duration: {Instantaneous}
+classes:
+  - {Class 1}
+  - {Class 2}
+tags:
+  - spell
+---
+```
+
+### **Timeline Properties**
+```yaml
+---
+type: timeline
+world: "[[{World Name}]]"
+current_year: {Year}
+tags:
+  - timeline
+  - lore
+---
+```
+
+### **DM Dashboard Properties**
+```yaml
+---
+type: dm_dashboard
+status: private
+tags:
+  - dm_screen
 ---
 ```
 
